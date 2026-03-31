@@ -4,7 +4,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Project: ShadowPay — Sitemap &amp; Status Tracker</title>
 <!-- PROJECT NAME: Update "ShadowPay" to official client name when confirmed -->
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📈</text></svg>">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💰</text></svg>">
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap');
 
@@ -623,6 +623,62 @@
     margin-bottom: 4px;
   }
 
+  /* ── Module block with preview thumbnail ── */
+  .module-block {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #bae6fd;
+  }
+
+  .module-block:last-of-type {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .module-content {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .module-preview {
+    flex-shrink: 0;
+    width: 200px;
+  }
+
+  .module-preview img {
+    width: 100%;
+    border-radius: 5px;
+    border: 1.5px solid #bae6fd;
+    display: block;
+  }
+
+  .module-preview-placeholder {
+    width: 200px;
+    height: 110px;
+    border: 1.5px dashed #bae6fd;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    background: #f8fbff;
+    color: #7dd3fc;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  .module-preview-placeholder .preview-icon {
+    font-size: 18px;
+    opacity: 0.6;
+  }
+
   /* ── Rings progress chart ── */
   .progress-summary { display: flex; align-items: center; gap: 40px; }
   .progress-bars-col { flex: 1; min-width: 0; }
@@ -755,6 +811,14 @@
   [data-theme="dark"] .content-section .content-created-box-title { color: #38bdf8; }
   [data-theme="dark"] .content-section .content-created-box-title::before { background: #0ea5e9; }
   [data-theme="dark"] .content-section .content-created-box p { color: #888884; }
+
+  [data-theme="dark"] .module-block { border-bottom-color: #1a4d66; }
+  [data-theme="dark"] .module-preview img { border-color: #1a4d66; }
+  [data-theme="dark"] .module-preview-placeholder {
+    background: #071520;
+    border-color: #1a4d66;
+    color: #1e6a8a;
+  }
   [data-theme="dark"] .ring-bg { stroke: #252525; }
   [data-theme="dark"] .rings-overall-pct { color: #e8e8e4; }
   [data-theme="dark"] .rings-overall-label { color: #484844; }
@@ -1038,13 +1102,24 @@
     <div class="content-created-box">
       <div class="content-created-box-title">Content Created</div>
       <hr style="border:none;border-top:1px solid #bae6fd;margin:14px 0;">
-      <p><strong>📌 Module 1 — Hero</strong></p>
-      <ul>
-        <li><strong>Headline:</strong> [Final approved headline copy]</li>
-        <li><strong>Body:</strong> [Final approved body copy]</li>
-        <li><strong>CTA:</strong> [Button label and destination]</li>
-      </ul>
-      <!-- Add 📌 Module blocks as content is drafted and approved -->
+      <div class="module-block">
+        <div class="module-content">
+          <p><strong>📌 Module 1 — Hero</strong></p>
+          <ul>
+            <li><strong>Headline:</strong> [Final approved headline copy]</li>
+            <li><strong>Body:</strong> [Final approved body copy]</li>
+            <li><strong>CTA:</strong> [Button label and destination]</li>
+          </ul>
+        </div>
+        <div class="module-preview">
+          <!-- Replace with <img src="screenshots/home-module-1.png" alt="Module 1"> once Figma is reviewed -->
+          <div class="module-preview-placeholder">
+            <span class="preview-icon">🖼️</span>
+            Module Preview
+          </div>
+        </div>
+      </div>
+      <!-- Add .module-block divs as content is drafted and approved -->
     </div>
   </div>
 
