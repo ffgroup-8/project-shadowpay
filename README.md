@@ -1,4 +1,4 @@
-# PayNearMe — Docs
+# Project Shadowpay — Docs
 
 Drop client documents here as they are received. Reference them in CLAUDE.md using `@docs/filename`.
 
